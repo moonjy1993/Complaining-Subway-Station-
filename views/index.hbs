@@ -1,0 +1,22 @@
+<h1>Complain</h1>
+
+<h3> Complaint List </h3>
+
+<form method="get" action="/">
+	Only show me complains on the
+	<input type="text" name="subwayline" > Line <input type="submit" value="Submit">
+</form>
+
+
+<UL>
+	{{#each list}}
+	<LI>
+		<font color="yellow">
+			{{_view.contentIndex}}{{this.subwayline}}
+		</font>
+		<font color="white">
+			 {{_view.contentIndex}}{{this.complaint}}
+		</font>
+	</LI>
+	{{/each}}
+</UL>
